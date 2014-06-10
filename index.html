@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Javascript for gifted children</title>
+
+
+    <meta name="author" content="Ditt navn her">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <link rel="stylesheet" href="reveal/css/reveal.min.css">
+    <link rel="stylesheet" href="reveal/css/theme/beige.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="/reveal/lib/css/zenburn.css">
+
+    <link rel="stylesheet" href="reveal/css/test.css">
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write( '<link rel="stylesheet" href="reveal/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="reveal/lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+    <style type="text/css">
+        .no-uppercase {text-transform: none !important;}
+    </style>
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+        <section data-state="bouvet-intro">
+
+            <h1 class="no-uppercase">JavaScript</h1>
+            <h2>for gifted children</h2>
+            <p>
+                <small>Svein Arild Myhrer</small>
+            </p>
+        </section>
+
+        <section data-state="bouvet-slide">
+
+            <h2>JavaScript</h2>
+
+            <ul>
+                <li>Cross-platform, object-oriented scripting language.</li>
+                <li>Core set of objects and language elements</li>
+                <li>Host platforms: Client side and Server side</li>
+                <li>Invented by Netscape => ECMAScript, (ECMA-262)</li>
+                <li>Current ECMAScript version: 5th edition</li>
+                <li>In progress: ES6, Harmony</li>
+            </ul>
+
+        </section>
+
+        <section data-state="bouvet-slide">
+            <img src="./img/goodparts.jpg">
+        </section>
+
+        <section data-state="bouvet-slide">
+            <ul>
+                <li>Chrome Devtools</li>
+                <li>http://jsbin.com/</li>
+            </ul>
+        </section>
+
+
+        <section data-state="bouvet-slide">
+            <ul>
+                <li>strings</li>
+                <li>numbers</li>
+                <li>booleans</li>
+                <li>null</li>
+                <li>undefined</li>
+                <li>objects</li>
+                <li>functions</li>
+            </ul>
+        </section>
+
+    </div>
+</div>
+
+<script src="reveal/lib/js/head.min.js"></script>
+<script src="reveal/js/reveal.min.js"></script>
+
+<script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: '/reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: '/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: '/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: '/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+            { src: '/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+            // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
+
+</script>
+
+</body>
+</html>
