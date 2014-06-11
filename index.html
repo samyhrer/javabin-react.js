@@ -51,12 +51,14 @@
         <section data-state="bouvet-slide" data-transition="none">
             <div>
                 <img src="./img/react.png">
+                <p class="fragment"><a href="https://github.com/facebook/react">https://github.com/facebook/react</a></p>
             </div>
         </section>
         
         <section data-state="bouvet-slide" data-transition="none">
             <div>
                 <img src="./img/react-with-mvc.png">
+                <p><a href="https://github.com/facebook/react">https://github.com/facebook/react</a></p>                
             </div>
         </section>
         
@@ -81,34 +83,35 @@
             <p>@floydophone</p>
         </section>
         
-        <section data-state="bouvet-slide" data-transition="none">
+        <!--section data-state="bouvet-slide" data-transition="none">
             <div>
                 <img src="img/facebook.png">
                 <p><a href="https://github.com/facebook/react">https://github.com/facebook/react</a></p>
             </div>
+        </section-->
+        
+        <section data-state="bouvet-slide" data-transition="none">
+            <h2>What?</h2>
+            <p class="fragment">A JavaScript library for building user interfaces</p>
+            <p class="fragment">"The V in MVC - it renders the UI and responds to events"</p>            
+        </section>
+        
+        
+        <section data-state="bouvet-slide" data-transition="none">
+            <h2>Why?</h2>
+            <ul>
+                <li class="fragment">Building UIs are difficult</li>                
+                <li class="fragment">Today's alternatives does not make it less complex</li>  
+            </ul>
         </section>
 
-  
-        
         <section data-state="bouvet-slide" data-transition="none">
-            <p>A JavaScript library for building user interfaces</p>
-            <ul>
-                <li class="fragment">"The V in MVC - it renders the UI and responds to events"</li>                
-                <li class="fragment">Technology stack agnotstic</li>
-                <li class="fragment">Not a widget library</li>
-            </ul>
-        </section>
-        
-        <section data-state="bouvet-slide" data-transition="none">
-            <p>Reasoning</p>
-            <ul>
-            
-            </ul>
+            <h2>How?</h2>
         </section>
         
         <section data-state="bouvet-slide">
             <h2>Core design principle:</h2>
-            <p>Re-render the whole app on every update</p>
+            <p>Re-render the whole application on every update</p>
             <ul>
                 <li class="fragment">Touching the DOM is slow</li>
                 <li class="fragment">Loses form state</li>
@@ -124,41 +127,66 @@
                 <li class="fragment">...diffs it with the old one</li>
                 <li class="fragment">...computes the minimal set of DOM mutatitions and batch executes all updates</li>             
             </ol>
-        </section>
-
-        <section data-state="bouvet-slide">
-            <h2><span style="color: grey;">Building blocks:</span> Components</h2>
-        </section>
+        </section>       
         
         <section data-state="bouvet-slide">
+            <h2><span style="color: grey;">Building blocks:</span> React Components</h2>
+        </section>        
+
+        <section data-state="bouvet-slide">
+            <h2>A simple React Component</h2>
            <pre><code>
-var HelloWorld = React.createClass({
-  render: function(){
-     return React.DOM.div('Hello world');
-  };
+var HelloMessage = React.createClass({
+  render: function() {
+    return React.DOM.div(null, "Hello ", this.props.name);
+  }
 });
-
-React.renderComponent(
-  HelloWorld(), 
-  document.body
-);
+React.renderComponent(HelloMessage( {name:"JavaBin"} ), document.body);
             </code></pre>
-        </section>
-        
-        <section data-state="bouvet-slide">
-            <pre>
             
+            <div class="fragment">
+            <p>using JSX</p>
+            <pre><code>
+var HelloMessage = React.createClass({
+  render: function() {
+    return &lt;div&gt;Hello {this.props.name}&lt;/div&gt;;
+  }
+});
+React.renderComponent(&lt;HelloMessage name="JavaBin" /&gt;, document.body);
+            </code></pre>
+            </div>
+        </section>
+
+        <section data-state="bouvet-slide">
+            <pre>            
             - CommentBox
                 - CommentList
                     - Comment
                 - CommentForm
             </pre>
         </section>
+    
+        <section data-state="bouvet-slide" data-transition="none">
+            <h2>Component lifecyle hooks</h2>
+            <ul>
+                <li class="">componentWillMount</li>                
+                <li class="">componentDidMount</li>  
+                <li class="">componentWillReceiveProps</li>  
+                <li class="">shouldComponentUpdate</li>  
+                <li class="">componentWillUpdate</li>  
+                <li class="">componentDidUpdate</li>  
+                <li class="">componentWillUnmount</li>  
+            </ul>
+        </section>       
+        
+        <section data-state="bouvet-slide">
+            <h1>The virtual DOM</h1>
+        </section>
         
         <section data-state="bouvet-slide">
             <div><img src="img/HypeCycle.png"></div>
         </section>
-        
+                
         <section data-state="bouvet-slide">
             <h2>Emerging architectures</h2>
             <ul>
@@ -170,12 +198,16 @@ React.renderComponent(
         <section data-state="bouvet-slide">
             <h2>My thoughts</h2>
             <ul>
-                <li>Concept will play a key role in isomorphic JavaScript applications</li>
-                <li>The virtual dom concept will probably get a spin-off</li>
-                <li>Will see more integration with full stack frameworks</li>
-                <li>React.js UI libraries will blossom</li>
-                <li>For a small project and focused? project, definietely a go</li>
+                <li class="fragment">Concept will play a key role in isomorphic JavaScript applications</li>
+                <li class="fragment">The virtual dom and diff algorithm will probably get a spin-off project</li>
+                <li class="fragment">We will see more integration with full stack frameworks</li>
+                <li class="fragment">React.js UI libraries will blossom</li>
+                <li class="fragment">Production ready: at least for isolated functionality</li>
             </ul>
+        </section>
+        
+        <section data-state="bouvet-slide">
+            <h2>Takk for meg</h2>
         </section>
         
         
